@@ -21,17 +21,17 @@ openBtn.addEventListener('click',(event)=>{
   // Start the music from the user's tap/click (required by mobile browser autoplay rules).
   audio.play().then(()=>musicBtn.textContent='♫').catch(()=>{musicBtn.textContent='♪'});
 
-  // Keep the page locked while the doors are physically opening.
-  // Scrolling becomes available only after the original door transition finishes.
+  // Unlock scrolling smoothly as doors slide open
   setTimeout(()=>{
     document.body.classList.remove('locked');
     document.body.classList.add('invitation-opened');
-  },1900);
+  },1600);
 
   setTimeout(()=>{
-    opening.remove();
+    opening.classList.add('finished');
+    setTimeout(()=>opening.remove(), 600);
     document.body.classList.remove('invitation-opened');
-  },2150);
+  },1800);
 });
 
 musicBtn.addEventListener('click',()=>{
@@ -80,7 +80,7 @@ function spawnRice(source,count){
   }
 }
 
-const target=new Date('2026-10-25T09:30:00+05:30').getTime();
+const target=new Date('2027-01-20T06:00:00+05:30').getTime();
 function tick(){
   let diff=Math.max(0,target-Date.now());
   const d=Math.floor(diff/86400000); diff%=86400000;
@@ -109,7 +109,7 @@ document.querySelectorAll('a[href^="https://www.google.com/maps"]').forEach(a=>{
 });
 
 /* RSVP + Admin */
-const RSVP_KEY='sudharshan-shrisha-rsvp-v1';
+const RSVP_KEY='balaji-vinitha-rsvp-v1';
 const rsvpForm=document.getElementById('rsvpForm');
 const rsvpAttending=document.getElementById('rsvpAttending');
 const rsvpStatus=document.getElementById('rsvpStatus');
