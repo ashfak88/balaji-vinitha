@@ -197,11 +197,24 @@ export default function Page() {
           <div className="section-heading dark-heading">
             <p className="eyebrow">OUR MOMENTS</p>
             <h2 className="script-title">A few memories</h2>
+            <p className="subtle">Swipe gently to explore</p>
           </div>
-          <div className="gallery-track single-highlight">
+          <div className="gallery-track">
             <figure>
-              <img src="assets/couple-photo.jpeg" alt="Balaji and Vinitha" loading="lazy" decoding="async" />
-              <figcaption>Balaji &amp; Vinitha</figcaption>
+              <img src="assets/gallery-1.jpg" alt="Balaji and Vinitha - Special Moments" loading="lazy" decoding="async" />
+              <figcaption>01 · Together in Love</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery-2.jpg" alt="Balaji and Vinitha - Peeku Park" loading="lazy" decoding="async" />
+              <figcaption>02 · Cherished Memories</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery-3.jpg" alt="Balaji and Vinitha - Sweet Smile" loading="lazy" decoding="async" />
+              <figcaption>03 · Beautiful Together</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery-4.jpg" alt="Balaji and Vinitha - Proud & Happy" loading="lazy" decoding="async" />
+              <figcaption>04 · Into Forever</figcaption>
             </figure>
           </div>
         </section>
