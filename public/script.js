@@ -142,7 +142,18 @@ rsvpForm?.addEventListener('submit',e=>{
   rsvpForm.reset();
   document.querySelectorAll('.attendance-btn').forEach(b=>b.classList.remove('selected'));
   rsvpAttending.value='';
-  rsvpStatus.textContent='Thank you. Your response has been recorded.';
+  rsvpStatus.textContent='Thank you! Opening WhatsApp to send your response...';
+  const msg=[
+    '*Wedding RSVP*',
+    '_Balaji ♥ Vinitha_',
+    '',
+    '*Name:* '+name,
+    '*Number of Attendees:* '+guests,
+    '*Attending:* '+(attending==='yes'?'Yes, I will attend ✅':'Sorry, I can\'t make it ❌'),
+    '',
+    'Thank you for the invitation!'
+  ].join('\n');
+  window.location.href='https://wa.me/917397317796?text='+encodeURIComponent(msg);
 });
 
 function showAdmin(){
